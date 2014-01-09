@@ -1,0 +1,11 @@
+/* line 1, /Users/paulmeskers/workspace/test/mean/src/stylesheets/main.scss */
+body {
+  text-align: center;
+}
+
+/* line 5, /Users/paulmeskers/workspace/test/mean/src/stylesheets/main.scss */
+#content {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+}
