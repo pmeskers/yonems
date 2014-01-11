@@ -29,6 +29,12 @@ This scaffold doesn't assume...
 
 Build it in ``src/``, gets served from ``web/``
 
+### Environment variables
+
+The express server port and the URI for connecting to Mongo DB are configurable
+through the environment variables ``PORT`` and ``MONGODB_URI``. If unset, they
+default to ``5000`` and ``mongodb://127.0.0.1:27017/yonems`` respectively.
+
 ### Heroku
 
 Since we've got a Gemfile here, when deploying to Heroku
@@ -36,3 +42,4 @@ set this env variable to force a nodejs buildpack.
 
     heroku config:set BUILDPACK_URL=https://github.com/heroku/heroku-buildpack-nodejs
 
+Additionally, make sure to set the MONGODB_URI to point to wherever your db lives.
