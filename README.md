@@ -23,11 +23,26 @@ This scaffold doesn't assume...
 
 ### Getting started
 
+Prepare all your dependencies...
+
     npm install
     bundle
+
+Spin up a server for local development...
+
     grunt server
 
-Build it in ``src/``, gets served from ``web/``
+Build the client-side app in ``src/``, which gets built and served from ``web/``.
+
+The server task will watch for any changes that occur in the ``src/`` dir
+and trigger a build when needed. A build consists of:
+
+1. Compass - compile sass into ``web/main.css``
+2. Uglify - minify and concat all JS into ``web/main.js``
+3. Copy html from views and place into ``web/``
+
+The default grunt task performs ``jshint`` and then builds the app 
+in the same steps described above.
 
 ### Environment variables
 
