@@ -1,4 +1,4 @@
-## Ye Olde Node + Express + Mongo Scaffold
+## Ye Olde Node + Express + ~~Mongo~~ Scaffold
 
 <img src="http://media0.giphy.com/media/LGzrggUppEBdm/giphy.gif" width=250 height=250/>
 
@@ -6,7 +6,6 @@
 
     # probably a bit more work than just this but you get the idea ;)
     brew install node
-    brew install mongo
     brew install ruby
 
 ### Assumptions
@@ -46,9 +45,7 @@ in the same steps described above.
 
 ### Environment variables
 
-The express server port and the URI for connecting to Mongo DB are configurable
-through the environment variables ``PORT`` and ``MONGODB_URI``. If unset, they
-default to ``5000`` and ``mongodb://127.0.0.1:27017/yonems`` respectively.
+The express server port is configurable through the environment variable ``PORT``. If unset, it defaults to ``5000``.
 
 ### Heroku
 
@@ -57,4 +54,6 @@ set this env variable to force a nodejs buildpack.
 
     heroku config:set BUILDPACK_URL=https://github.com/heroku/heroku-buildpack-nodejs
 
-Additionally, make sure to set the MONGODB_URI to point to wherever your db lives.
+### Mongo
+
+Check out the branch yonems-mongo for an implementation which sets up MongoDB as well.
