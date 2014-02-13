@@ -1,1 +1,0 @@
-window.onload=function(){var a=document.getElementById("content");a.style.backgroundColor="blue"};
