@@ -4,9 +4,18 @@
 
 ### Pre-requisites
 
-    # probably a bit more work than just this but you get the idea ;)
     brew install node
-    brew install ruby
+    npm install -g grunt-cli
+
+For this particularly tasty sassc version, you'll also need to have the sassc binary. Don't worry, this is actually
+quite simple... from your favorite workspace directory, just run the following:
+
+    git clone https://github.com/hcatlin/sassc
+    git clone https://github.com/hcatlin/libsass
+    export SASS_LIBSASS_PATH=`pwd`/libsass
+    cd sassc
+    make
+    mv bin/sassc /usr/local/bin
 
 ### Assumptions
 
@@ -36,7 +45,7 @@ Build the client-side app in ``src/``, which gets built and served from ``web/``
 The server task will watch for any changes that occur in the ``src/`` dir
 and trigger a build when needed. A build consists of:
 
-1. Compass - compile sass into ``web/main.css``
+1. Sass compilation via sassc/libsass - compile sass into ``web/main.css``
 2. Uglify - minify and concat all JS into ``web/main.js``
 3. Copy html from views and place into ``web/``
 
