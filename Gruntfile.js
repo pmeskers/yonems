@@ -61,5 +61,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', ['compass', 'uglify', 'copy']);
   grunt.registerTask('default', ['jshint', 'build']);
-  grunt.registerTask('server', ['express:dev', 'watch']);
+  grunt.registerTask('server', ['build', 'express:dev', 'watch']);
 };
